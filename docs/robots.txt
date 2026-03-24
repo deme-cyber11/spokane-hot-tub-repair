@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://spokanehottubrepairt.com/sitemap.xml
+Sitemap: https://spokanehottubrepair.com/sitemap.xml
