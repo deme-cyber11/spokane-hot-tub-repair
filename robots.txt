@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://spokanehottubrepair.com/sitemap.xml
+Sitemap: https://inlandnwhottubs.com/sitemap.xml
