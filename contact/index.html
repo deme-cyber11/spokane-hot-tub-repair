@@ -13,6 +13,8 @@
 
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.v1.css">
+<link rel="stylesheet" href="/css/style.v2.5.css">
+<link rel="stylesheet" href="/css/site-theme.css">
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-D6ZBY16329"></script>
@@ -128,7 +130,7 @@
           <h2>Send Us a Message</h2>
           <p>Fill out the form below and we'll get back to you within 24 hours.</p>
           <form id="contact-form" action="https://lead-manager-api.irontigerdigital.workers.dev/ingest" method="POST">
-        <input type="hidden" name="_honey" style="display:none">
+        <input type="text" name="_honey" style="display:none !important;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
         <input type="hidden" name="_subject" value="New Lead — Inland NW Hot Tubs">
             <input type="hidden" name="redirect" value="https://inlandnwhottubs.com/thank-you/">
 
