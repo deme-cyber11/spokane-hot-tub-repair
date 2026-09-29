@@ -127,7 +127,7 @@ textarea{resize:vertical;min-height:88px;line-height:1.6}
         </div>
         <div class="field">
           <label for="state">State <span class="req">*</span></label>
-          <input type="text" id="state" name="state" required placeholder="TX" maxlength="2" autocomplete="address-level1" oninput="this.value=this.value.toUpperCase()">
+          <input type="text" id="state" name="state" required placeholder="TX" maxlength="20" autocomplete="address-level1" oninput="this.value=this.value.toUpperCase()" onchange="this.value=this.value.toUpperCase()">
         </div>
       </div>
       <div class="field" style="margin-bottom:0">
