@@ -109,7 +109,7 @@ textarea{resize:vertical;min-height:88px;line-height:1.6}
         </div>
         <div class="field">
           <label for="phone">Phone Number <span class="req">*</span></label>
-          <input maxlength="20" type="tel" id="phone" name="phone" required placeholder="(555) 000-1234">
+          <input pattern="\+?1?[\s.\-]?\(?[0-9]{3}\)?[\s.\-]?[0-9]{3}[\s.\-]?[0-9]{4}" maxlength="20" type="tel" id="phone" name="phone" required placeholder="(555) 000-1234">
         </div>
       </div>
       <div class="field">
