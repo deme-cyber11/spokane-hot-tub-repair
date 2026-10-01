@@ -194,3 +194,5 @@ body.dm .info-item > i { display: inline-flex; align-items: center; justify-cont
 body.dm .info-item h3 { font-size: 1.1rem; margin-bottom: 6px; }
 body.dm .info-item p { color: var(--dm-muted); font-size: .95rem; }
 body.dm .pricing-info { background: var(--dm-soft); }
+body.dm .pricing-section { padding-bottom: 40px !important; } body.dm .pricing-info { padding-top: 56px !important; } @media (max-width: 640px) { body.dm .pricing-section { padding-bottom: 24px !important; } body.dm .pricing-info { padding-top: 40px !important; } }
+@media (max-width: 640px) { body.dm .pricing-card { padding: 28px 22px; } body.dm .info-item { padding: 20px; } body.dm .pricing-info { padding-top: 28px !important; } }
