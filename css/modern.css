@@ -196,3 +196,36 @@ body.dm .info-item p { color: var(--dm-muted); font-size: .95rem; }
 body.dm .pricing-info { background: var(--dm-soft); }
 body.dm .pricing-section { padding-bottom: 40px !important; } body.dm .pricing-info { padding-top: 56px !important; } @media (max-width: 640px) { body.dm .pricing-section { padding-bottom: 24px !important; } body.dm .pricing-info { padding-top: 40px !important; } }
 @media (max-width: 640px) { body.dm .pricing-card { padding: 28px 22px; } body.dm .info-item { padding: 20px; } body.dm .pricing-info { padding-top: 28px !important; } }
+
+/* Round 2 (2026-10-01): phone and tablet tap targets and call action. Media-scoped only, desktop unchanged. */
+@media (max-width: 1100px) {
+  body.dm .site-header .logo { min-height: 44px; }
+  body.dm .nav-links a { min-height: 44px; display: inline-flex; align-items: center; }
+  body.dm .mobile-toggle { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+  body.dm .breadcrumb a { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  body.dm .mobile-menu a { min-height: 44px; }
+  body.dm .mobile-close { min-width: 44px; min-height: 44px; }
+  body.dm .faq-question { min-height: 44px; }
+  body.dm main li > a[href^="tel:"], body.dm .contact-info-item a[href^="tel:"], body.dm .contact-info-item a[href^="mailto:"] { display: inline-flex; align-items: center; min-height: 44px; }
+  body.dm footer a[href^="tel:"], body.dm .site-footer a[href^="tel:"] { display: inline-flex; align-items: center; min-height: 44px; }
+}
+@media (max-width: 968px) {
+  body.dm .mobile-toggle { display: inline-flex; }
+}
+@media (max-width: 768px) {
+  body.dm .floating-cta { transform: none; opacity: 1; pointer-events: auto; }
+}
+@media (min-width: 969px) and (max-width: 1100px) {
+  body.dm .site-header .logo { white-space: nowrap; font-size: 1.15rem; }
+  body.dm .nav-links { gap: 2px; }
+  body.dm .nav-links a { padding: 8px 10px; }
+  body.dm .nav-links a.header-phone { white-space: nowrap; padding: 8px 14px; }
+}
+@media (max-width: 1023px) {
+  body.dm .trust-bar .container { display: block; }
+  body.dm .trust-bar .trust-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 28px; }
+}
+@media (min-width: 641px) and (max-width: 1023px) {
+  body.dm #reviews .container > div[style*="grid"] { grid-template-columns: 1fr 1fr !important; }
+  body.dm #reviews .container > div[style*="grid"] > div:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}

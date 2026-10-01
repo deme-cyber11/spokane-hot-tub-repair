@@ -20,6 +20,11 @@ button{cursor:pointer;font-family:inherit;border:none}
 .nav{position:sticky;top:0;z-index:100;background:#1a1a2e;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 12px rgba(0,0,0,.15)}
 .nav__logo{font-size:1.05rem;font-weight:800;color:#fff;letter-spacing:-.01em}
 .nav__logo span{color:#e94560}
+.nav__links{display:flex;gap:4px;margin-left:auto;margin-right:16px}
+.nav__links a{color:#cbd5e1;font-weight:600;font-size:.875rem;padding:9px 12px;border-radius:8px}
+.nav__links a:hover{color:#fff;background:rgba(255,255,255,.08)}
+@media(max-width:1100px){.nav__logo,.nav__cta,.nav__links a{min-height:44px;display:inline-flex;align-items:center}.nav__logo{gap:.3em}}
+@media(max-width:640px){.nav{flex-wrap:wrap;row-gap:4px;padding:10px 16px}.nav__links{order:3;width:100%;margin:0;justify-content:space-between}.nav__links a{padding:0 10px;min-width:44px;justify-content:center}}
 .nav__cta{background:#e94560;color:#fff;font-weight:700;font-size:.875rem;padding:9px 20px;border-radius:100px;white-space:nowrap}
 .page{max-width:680px;margin:0 auto;padding:40px 16px 80px}
 .page-header{text-align:center;margin-bottom:32px}
@@ -70,6 +75,8 @@ textarea{resize:vertical;min-height:88px;line-height:1.6}
 .success a{color:#e94560;font-weight:600}
 .footer{text-align:center;padding:32px 16px;font-size:.8125rem;color:#94a3b8}
 .footer a{color:#e94560;font-weight:500}
+@media(max-width:1100px){.check-item{min-height:44px}}
+@media(max-width:640px){.footer{font-size:.9375rem;line-height:1.7}.footer a{display:inline-flex;align-items:center;min-height:44px}}
 </style>
 <!-- favicon + link preview (tools/link-preview-kit.py) -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -87,7 +94,8 @@ textarea{resize:vertical;min-height:88px;line-height:1.6}
 <body>
 
 <nav class="nav">
-  <div class="nav__logo">Hot <span>Pro</span></div>
+  <a href="/" class="nav__logo">Inland NW <span>Hot Tubs</span></a>
+  <div class="nav__links"><a href="/services/hot-tub-repair/">Services</a><a href="/pricing/">Pricing</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></div>
   <a href="tel:5092367423" class="nav__cta">(509) 236-7423</a>
 </nav>
 
@@ -332,7 +340,7 @@ textarea{resize:vertical;min-height:88px;line-height:1.6}
 </main>
 
 <div class="footer">
-  <p>&copy; 2026 Hot Tub Repair in Spokane, WA &nbsp;|&nbsp; Licensed &amp; Insured&nbsp;|&nbsp; <a href='tel:5092367423'>(509) 236-7423</a></p>
+  <p>&copy; 2026 Inland NW Hot Tubs &nbsp;|&nbsp; Licensed &amp; Insured&nbsp;|&nbsp; <a href='tel:5092367423'>(509) 236-7423</a></p>
 </div>
 
 <script>
