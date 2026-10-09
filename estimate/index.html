@@ -89,7 +89,7 @@ textarea{resize:vertical;min-height:88px;line-height:1.6}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://inlandnwhottubs.com/images/og-card.jpg">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6DXJGY28HB"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6DXJGY28HB');</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}if(navigator.webdriver||!/(^|\.)inlandnwhottubs\.com$/.test(location.hostname))window['ga-disable-G-6DXJGY28HB']=true;gtag('js',new Date());gtag('config','G-6DXJGY28HB');document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="tel:"]');if(a)gtag('event','click_to_call',{link_url:a.getAttribute('href')});},true);</script>
 </head>
 <body>
 
@@ -344,7 +344,7 @@ textarea{resize:vertical;min-height:88px;line-height:1.6}
 </div>
 
 <script>
-if(window.location.hash==='#success'){document.getElementById('form').style.display='none';document.getElementById('success').style.display='block';}
+if(window.location.hash==='#success'){document.getElementById('form').style.display='none';document.getElementById('success').style.display='block';if(window.gtag)gtag('event','generate_lead',{form_id:'form'});}
 document.getElementById('photos').addEventListener('change',function(){document.getElementById('upload-label').textContent=this.files.length?this.files.length+' photo'+(this.files.length>1?'s':'')+' selected':'Tap to upload photos';});
 document.getElementById('form').addEventListener('submit',function(e){
   var checked=document.querySelectorAll('input[name="services[]"]:checked');
