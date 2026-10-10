@@ -137,6 +137,7 @@
           <p>Fill out the form below and we'll get back to you within 24 hours.</p>
           <!-- id is lead-form, not contact-form: js/main.js still binds a Web3Forms handler (no access key) to #contact-form -->
           <form id="lead-form" action="https://lead-manager-api.irontigerdigital.workers.dev/ingest" method="POST">
+<input type="hidden" name="page_url" value="/contact/">
         <input type="text" name="_honey" style="display:none !important;position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
         <input type="hidden" name="_subject" value="New Lead — Inland NW Hot Tubs">
             <input type="hidden" name="_redirect" value="https://inlandnwhottubs.com/thank-you/">
@@ -181,7 +182,8 @@
       <input maxlength="120" type="text" id="address" name="address" placeholder="Your property address" required>
     </div>
     <button type="submit" class="btn btn-primary btn-full"><i class="ph ph-paper-plane-tilt"></i> Send Message</button>
-          </form>
+          <p class="itd-form-notice" style="grid-column:1/-1;margin:.75rem 0 0;font-size:.8125rem;line-height:1.5;text-align:center">Your request and contact details go to an independent local contractor who serves your area, so they can contact you about your project.</p>
+</form>
         </div>
 
         <!-- Contact Info Card -->
@@ -327,5 +329,8 @@
   },{passive:true});
 })();
 </script>
+<!-- itd-d24: page attribution for leads and calls, managed by tools/page-attribution-plan.py -->
+<script>(function(){var A='https://lead-manager-api.irontigerdigital.workers.dev';function f(){var fs=document.querySelectorAll('form');for(var i=0;i<fs.length;i++){var x=fs[i],a=x.getAttribute('action')||'';if(a&&a.indexOf('/ingest')<0)continue;var h=x.querySelector('input[name="page_url"]');if(!h){h=document.createElement('input');h.type='hidden';h.name='page_url';x.appendChild(h);}h.value=location.pathname;}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f();document.addEventListener('click',function(e){var t=e.target&&e.target.closest?e.target.closest('a[href^="tel:"]'):null;if(!t||!navigator.sendBeacon)return;try{navigator.sendBeacon(A+'/track/call-click',JSON.stringify({site:location.hostname.replace(/^www\./,''),page_path:location.pathname,tel:t.getAttribute('href')}));}catch(_){}},true);})();</script>
+<!-- /itd-d24 -->
 </body>
 </html>
